@@ -1,16 +1,26 @@
 <template>
   <div>
-    <nav>Logo</nav>
-    <main>Hello</main>
-    <footer>
-      footer
-    </footer>
+    <Header />
+    <main>
+      <router-view />
+    </main>
   </div>
 </template>
 
 <script>
+import Header from "./components/Header";
+
 export default {
-  name: "app",
+  name: "App",
+  components: {
+    Header,
+  },
+  data() {
+    return {};
+  },
+
+  methods: {},
+  created() {},
 };
 </script>
 
