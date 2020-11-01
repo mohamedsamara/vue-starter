@@ -1,34 +1,38 @@
 <template>
-  <div>
-    <Header />
-    <main>
-      <router-view />
-    </main>
+  <div class="application">
+    <Sidebar />
+    <v-main>
+      <v-container>
+        <router-view />
+      </v-container>
+    </v-main>
   </div>
 </template>
 
 <script>
-import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
 
 export default {
   name: "App",
   components: {
-    Header,
+    Sidebar,
   },
-  data() {
-    return {};
-  },
-
-  methods: {},
-  created() {},
 };
 </script>
 
-<style lang="css">
-html,
+<style lang="scss">
+@import "./styles/core.scss";
+
 body {
   margin: 0;
   padding: 0;
   height: 100%;
+  background-color: $secondary-color;
+  font-family: $font-family;
+}
+
+.application {
+  display: flex;
+  height: 100vh;
 }
 </style>

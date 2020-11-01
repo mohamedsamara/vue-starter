@@ -1,17 +1,10 @@
 <template>
-  <h1>Homepage</h1>
+  <h3>Homepage</h3>
 </template>
 
 <script>
 export default {
   name: "Home",
-  components: {},
-  data() {
-    return {};
-  },
-
-  methods: {},
-  created() {},
 };
 </script>
 

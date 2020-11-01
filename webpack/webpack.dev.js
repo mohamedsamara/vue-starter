@@ -21,14 +21,14 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.(css)$/,
+        test: /\.(scss|sass|css)$/,
         use: [
           "style-loader",
           {
             loader: "css-loader",
-            options: {
-              sourceMap: true,
-            },
+          },
+          {
+            loader: "sass-loader",
           },
         ],
       },
