@@ -1,12 +1,10 @@
 <template>
   <v-card>
     <v-navigation-drawer v-model="drawer" :mini-variant.sync="mini" permanent>
-      <v-list-item class="px-2">
-        <v-list-item-avatar>
-          <v-img src=""></v-img>
+      <v-list-item class="px-2 justify-space-between sidebar-header">
+        <v-list-item-avatar rounded="0">
+          <v-img src="/images/logo.png"></v-img>
         </v-list-item-avatar>
-
-        <v-list-item-title>Vue</v-list-item-title>
 
         <v-btn icon @click.stop="mini = !mini">
           <v-icon>mdi-chevron-left</v-icon>
@@ -22,10 +20,7 @@
           </v-list-item-icon>
 
           <v-list-item-content>
-            <!-- <router-link to="{{item.to}}"> -->
             <v-list-item-title>{{ item.title }}</v-list-item-title>
-
-            <!-- </router-link> -->
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -39,11 +34,11 @@ export default {
   data() {
     return {
       drawer: true,
+      mini: true,
       items: [
         { title: "Home", icon: "mdi-home", to: "/" },
         { title: "Contact", icon: "mdi-contacts", to: "/contact" },
       ],
-      mini: true,
     };
   },
 };
@@ -53,5 +48,9 @@ export default {
 .v-list--dense .v-list-item .v-list-item__icon,
 .v-list-item--dense .v-list-item__icon {
   margin-right: 32px;
+}
+
+.sidebar-header:after {
+  content: none;
 }
 </style>

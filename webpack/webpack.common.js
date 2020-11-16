@@ -6,6 +6,7 @@ const { join } = require("path");
 const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const CURRENT_WORKING_DIR = process.cwd();
 
@@ -37,5 +38,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: join(CURRENT_WORKING_DIR, "public/index.html"),
     }),
+    new CopyWebpackPlugin([{ from: "public" }]),
   ],
 };

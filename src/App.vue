@@ -1,5 +1,5 @@
 <template>
-  <div class="application">
+  <div class="application v-application">
     <Sidebar />
     <v-main>
       <v-container>
@@ -28,7 +28,6 @@ body {
   padding: 0;
   height: 100%;
   background-color: $secondary-color;
-  font-family: $font-family;
 }
 
 .application {

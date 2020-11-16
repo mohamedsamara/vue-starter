@@ -36,6 +36,32 @@ module.exports = merge(common, {
           },
         ],
       },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg|ico)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              outputPath: "images",
+              publicPath: "../images",
+              name: "[name].[hash].[ext]",
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              outputPath: "fonts",
+              publicPath: "../fonts",
+              name: "[name].[hash].[ext]",
+            },
+          },
+        ],
+      },
     ],
   },
   performance: {
