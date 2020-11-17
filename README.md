@@ -1,0 +1,37 @@
+# Vue Starter
+
+## Install
+
+Some basic Git commands are:
+
+```
+$ git clone https://github.com/mohamedsamara/vue-starter.git
+$ cd project
+$ npm install
+```
+
+## Simple build for production
+
+```
+$ npm run build
+```
+
+## Run the application for development
+
+```
+$ npm run dev
+```
+
+## Run the application for production
+
+```
+$ npm run serve
+```
+
+## Languages & tools
+
+- [Vue](https://vuejs.org/)
+
+- [Vuetify](https://vuetifyjs.com/en/)
+
+- [Webpack](https://webpack.js.org/)
