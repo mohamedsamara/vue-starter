@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="drawer" :mini-variant.sync="mini" permanent>
       <v-list-item class="px-2 justify-space-between sidebar-header">
         <v-list-item-avatar rounded="0">
-          <v-img src="/images/logo.png"></v-img>
+          <v-img src="/images/logo.png" />
         </v-list-item-avatar>
 
         <v-btn icon @click.stop="mini = !mini">
@@ -11,7 +11,7 @@
         </v-btn>
       </v-list-item>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-list dense>
         <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
@@ -30,17 +30,17 @@
 
 <script>
 export default {
-  name: "Header",
+  name: 'Header',
   data() {
     return {
       drawer: true,
       mini: true,
       items: [
-        { title: "Home", icon: "mdi-home", to: "/" },
-        { title: "Contact", icon: "mdi-contacts", to: "/contact" },
-      ],
+        { title: 'Home', icon: 'mdi-home', to: '/' },
+        { title: 'Contact', icon: 'mdi-contacts', to: '/contact' }
+      ]
     };
-  },
+  }
 };
 </script>
 

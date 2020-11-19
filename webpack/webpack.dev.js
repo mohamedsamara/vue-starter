@@ -1,66 +1,66 @@
 /* eslint-disable */
 
-"use strict";
+'use strict';
 
-const { join } = require("path");
-const { HotModuleReplacementPlugin, EnvironmentPlugin } = require("webpack");
-const { merge } = require("webpack-merge");
+const { join } = require('path');
+const { HotModuleReplacementPlugin, EnvironmentPlugin } = require('webpack');
+const { merge } = require('webpack-merge');
 
-const common = require("./webpack.common");
-const environment = require("./env/dev.env");
+const common = require('./webpack.common');
+const environment = require('./env/dev.env');
 
 const CURRENT_WORKING_DIR = process.cwd();
 
 module.exports = merge(common, {
-  mode: "development",
+  mode: 'development',
   output: {
-    path: join(CURRENT_WORKING_DIR, "build"),
-    filename: "[name].js",
+    path: join(CURRENT_WORKING_DIR, 'build'),
+    filename: '[name].js'
   },
-  devtool: "cheap-module-eval-source-map",
+  devtool: 'cheap-module-eval-source-map',
   module: {
     rules: [
       {
         test: /\.(scss|sass|css)$/,
         use: [
-          "style-loader",
+          'style-loader',
           {
-            loader: "css-loader",
+            loader: 'css-loader'
           },
           {
-            loader: "sass-loader",
-          },
-        ],
+            loader: 'sass-loader'
+          }
+        ]
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg|ico)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
-              outputPath: "images",
-              name: "[name].[ext]",
-            },
-          },
-        ],
+              outputPath: 'images',
+              name: '[name].[ext]'
+            }
+          }
+        ]
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
-              outputPath: "fonts",
-              name: "[name].[ext]",
-            },
-          },
-        ],
-      },
-    ],
+              outputPath: 'fonts',
+              name: '[name].[ext]'
+            }
+          }
+        ]
+      }
+    ]
   },
   plugins: [
     new EnvironmentPlugin(environment),
-    new HotModuleReplacementPlugin(),
+    new HotModuleReplacementPlugin()
   ],
   devServer: {
     port: 3000,
@@ -77,7 +77,7 @@ module.exports = merge(common, {
       timings: true,
       chunks: false,
       chunkModules: false,
-      modules: false,
-    },
-  },
+      modules: false
+    }
+  }
 });

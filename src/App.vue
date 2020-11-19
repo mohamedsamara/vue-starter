@@ -10,18 +10,18 @@
 </template>
 
 <script>
-import Sidebar from "./components/Sidebar";
+import Sidebar from './components/Sidebar';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    Sidebar,
-  },
+    Sidebar
+  }
 };
 </script>
 
 <style lang="scss">
-@import "./styles/core.scss";
+@import './styles/core.scss';
 
 body {
   margin: 0;
