@@ -16,6 +16,14 @@
     "type": "git",
     "url": "git+https://github.com/mohamedsamara/vue-starter.git"
   },
+  "keywords": [
+    "vue",
+    "vue-router",
+    "vuetify",
+    "sass",
+    "webpack",
+    "eslint"
+  ],
   "author": "Mohamed Samara (https://github.com/mohamedsamara)",
   "license": "MIT",
   "bugs": {
