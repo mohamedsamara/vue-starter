@@ -28,6 +28,12 @@ $ npm run dev
 $ npm run serve
 ```
 
+## Run the code linter
+
+```
+$ npm run lint:fix
+```
+
 ## Languages & tools
 
 - [Vue](https://vuejs.org/)
@@ -35,3 +41,7 @@ $ npm run serve
 - [Vuetify](https://vuetifyjs.com/en/)
 
 - [Webpack](https://webpack.js.org/)
+
+- [ESLint](https://eslint.org/)
+
+
