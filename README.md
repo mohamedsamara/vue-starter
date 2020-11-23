@@ -38,7 +38,11 @@ $ npm run lint:fix
 
 - [Vue](https://vuejs.org/)
 
+- [Vue Router](https://router.vuejs.org/)
+
 - [Vuetify](https://vuetifyjs.com/en/)
+
+- [Sass](https://sass-lang.com/)
 
 - [Webpack](https://webpack.js.org/)
 
